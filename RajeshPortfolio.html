@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Rajesh's personal portfolio">
+
+    <title>Rajesh | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+    /* GENERAL */
+
+    :root {
+        --blue: #00c8ff;
+        --dark: #080b16;
+        --card: #11182a;
+        --text: #aab4c5;
+        --border: #25334b;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--dark);
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        background: rgba(8, 11, 22, 0.97);
+        padding: 18px 0;
+        border-bottom: 1px solid #20283a;
+    }
+
+    .navbar-brand {
+        font-size: 28px;
+        font-weight: 800;
+        color: white;
+    }
+
+    .navbar-brand span {
+        color: var(--blue);
+    }
+
+    .navbar .nav-link {
+        color: white;
+        margin-left: 16px;
+        transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+        color: var(--blue);
+    }
+
+
+    /* HERO SECTION */
+
+    .hero {
+        min-height: 100vh;
+        padding: 120px 0 70px;
+
+        background:
+        radial-gradient(circle at 78% 48%,
+        #10294b, transparent 42%);
+
+        display: flex;
+        align-items: center;
+    }
+
+    .welcome {
+        color: var(--blue);
+        letter-spacing: 4px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        font-weight: 800;
+    }
+
+    .accent {
+        color: var(--blue);
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+    .hero h3 {
+        color: var(--blue);
+        font-size: 23px;
+    }
+
+    .hero-description {
+        color: var(--text);
+        line-height: 1.9;
+        margin-top: 20px;
+        max-width: 550px;
+    }
+
+
+    /* BUTTONS */
+
+    .primary-btn,
+    .secondary-btn {
+        border-radius: 30px;
+        padding: 12px 25px;
+        display: inline-block;
+        text-decoration: none;
+        transition: 0.3s;
+        margin: 8px 8px 0 0;
+    }
+
+    .primary-btn {
+        background: var(--blue);
+        color: black;
+        font-weight: 600;
+    }
+
+    .primary-btn:hover {
+        background: white;
+        color: black;
+    }
+
+    .secondary-btn {
+        border: 1px solid var(--blue);
+        color: var(--blue);
+    }
+
+    .secondary-btn:hover {
+        background: var(--blue);
+        color: black;
+    }
+
+
+    /* PROFILE IMAGE */
+
+    .profile-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 330px;
+        height: 330px;
+
+        object-fit: cover;
+        object-position: center 35%;
+
+        border-radius: 50%;
+        border: 5px solid var(--blue);
+
+        box-shadow: 0 0 42px #00c8ff55;
+        display: block;
+    }
+
+
+    /* SOCIAL ICONS */
+
+    .social-icons {
+        margin-top: 42px;
+    }
+
+    .social-icons a {
+        font-size: 27px;
+        color: var(--blue);
+        margin-right: 25px;
+        transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: white;
+    }
+
+
+    /* COMMON SECTION */
+
+    .section-padding {
+        padding: 90px 0;
+    }
+
+    .section-heading {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 750;
+        margin-bottom: 48px;
+    }
+
+
+    /* CARDS */
+
+    .about-card,
+    .info-card,
+    .skill-card,
+    .project-card,
+    .cert-card,
+    .contact-card {
+
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+    }
+
+
+    /* ABOUT */
+
+    .about-card {
+        padding: 35px;
+        border-left: 4px solid var(--blue);
+        color: var(--text);
+        line-height: 1.9;
+    }
+
+
+    /* EDUCATION */
+
+    .info-card {
+        padding: 30px 24px;
+        text-align: center;
+        height: 100%;
+        transition: 0.3s;
+    }
+
+    .info-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--blue);
+    }
+
+    .info-card i {
+        font-size: 38px;
+        color: var(--blue);
+        margin-bottom: 16px;
+    }
+
+    .info-card p {
+        color: var(--text);
+    }
+
+    .info-card span {
+        color: var(--blue);
+    }
+
+
+    /* TRAINING */
+
+    .training-tag {
+        display: inline-block;
+        border: 1px solid var(--blue);
+        color: var(--blue);
+        border-radius: 30px;
+        padding: 5px 12px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+
+    /* SKILLS */
+
+    .skill-card {
+        padding: 30px 15px;
+        text-align: center;
+        height: 100%;
+        transition: 0.3s;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--blue);
+        background: #17243a;
+    }
+
+    .skill-card i {
+        font-size: 35px;
+        color: var(--blue);
+    }
+
+    .skill-card h5 {
+        margin-top: 15px;
+    }
+
+    .skill-card p {
+        color: var(--text);
+        margin-bottom: 0;
+    }
+
+
+    /* PROJECTS */
+
+    .project-card {
+        padding: 35px;
+        height: 100%;
+        transition: 0.3s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--blue);
+    }
+
+    .project-icon {
+        color: var(--blue);
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .project-card p {
+        color: var(--text);
+        line-height: 1.8;
+    }
+
+    .project-card span {
+        color: var(--blue);
+        font-size: 14px;
+    }
+
+
+    /* CERTIFICATIONS */
+
+    .cert-card {
+        padding: 30px 24px;
+        height: 100%;
+        transition: 0.3s;
+    }
+
+    .cert-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--blue);
+    }
+
+    .cert-card i {
+        font-size: 38px;
+        color: var(--blue);
+        margin-bottom: 16px;
+    }
+
+    .cert-card p {
+        color: var(--text);
+    }
+
+    .cert-card a {
+        color: var(--blue);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .cert-card a:hover {
+        color: white;
+    }
+
+
+    /* CONTACT */
+
+    .contact-card {
+        max-width: 620px;
+        margin: auto;
+        padding: 32px;
+    }
+
+    .contact-card p {
+        color: var(--text);
+        overflow-wrap: anywhere;
+    }
+
+    .contact-card i {
+        color: var(--blue);
+        margin-right: 12px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        text-align: center;
+        background: #050710;
+        padding: 28px;
+        color: var(--text);
+        border-top: 1px solid #20283a;
+    }
+
+
+    /* RESPONSIVE */
+
+    @media (max-width: 991px) {
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero-description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .profile-wrap {
+            margin-top: 48px;
+        }
+
+        .social-icons {
+            margin-top: 32px;
+        }
+
+        .navbar .nav-link {
+            margin-left: 0;
+        }
+
+    }
+
+
+    @media (max-width: 576px) {
+
+        .section-padding {
+            padding: 65px 0;
+        }
+
+        .section-heading {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+        }
+
+        .about-card,
+        .contact-card {
+            padding: 24px;
+        }
+
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            My Portfolio<span>.</span>
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#training">Training</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#certifications">Certifications</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HOME SECTION -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <p class="welcome">
+                    WELCOME TO MY PORTFOLIO
+                </p>
+
+                <h1>
+                    Hi, I'm <span class="accent">Rajesh</span>
+                </h1>
+
+                <h2>
+                    Computer Science Engineer
+                </h2>
+
+                <h3>
+                    Data Science Enthusiast
+                </h3>
+
+                <p class="hero-description">
+
+                    A Computer Science Engineering graduate
+                    interested in technology, programming,
+                    data science and building innovative solutions.
+
+                    Currently developing my skills through
+                    Java Full Stack training at Tata STRIVE.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="#projects" class="primary-btn">
+                        Explore My Work
+                    </a>
+
+                    <a href="C:\Users\godug\OneDrive\Attachments\html tutorials\Desktop\Godugu_Rajesh_Resume.pdf"
+                       class="secondary-btn"
+                       download>
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="social-icons">
+
+                    <a href="https://www.linkedin.com/in/godugu-rajesh-1603a32b7"
+                       target="_blank">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a href="https://github.com/rajeshgodugu28"
+                       target="_blank">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+                    <a href="mailto:godugurajesh28@gmail.com">
+
+                        <i class="bi bi-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE IMAGE -->
+
+            <div class="col-lg-5">
+
+                <div class="profile-wrap">
+
+                    <img src="C:\Users\godug\OneDrive\Pictures\rajesh.jpg"
+                         alt="Rajesh Profile"
+                         class="profile-img">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section id="about" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            About <span class="accent">Me</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="about-card">
+
+                    <p>
+                        Hello! I'm Rajesh, a Computer Science
+                        and Engineering graduate specializing
+                        in Data Science from Keshav Memorial
+                        College of Engineering.
+                    </p>
+
+                    <p>
+                        I am passionate about technology,
+                        programming, data analytics and
+                        artificial intelligence.
+
+                        I enjoy learning new technologies,
+                        solving problems and developing
+                        practical projects.
+                    </p>
+
+                    <p>
+                        I am currently undergoing Java Full Stack
+                        training at Tata STRIVE, where I am working
+                        towards strengthening my software
+                        development skills.
+                    </p>
+
+                    <p>
+                        My goal is to keep learning and build
+                        useful, reliable technology solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION SECTION -->
+
+<section id="education" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            My <span class="accent">Education</span>
+        </h2>
+
+        <div class="row g-4 justify-content-center">
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="info-card">
+
+                    <i class="bi bi-mortarboard-fill"></i>
+
+                    <h4>Bachelor of Technology</h4>
+
+                    <p>Computer Science Engineering</p>
+
+                    <p>Data Science</p>
+
+                    <p>Keshav Memorial College of Engineering</p>
+
+                    <span>Graduation Year: 2026</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="info-card">
+
+                    <i class="bi bi-book-fill"></i>
+
+                    <h4>Intermediate</h4>
+
+                    <p>Sri Gayatri Jr College</p>
+
+                    <span>Year: 2022</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="info-card">
+
+                    <i class="bi bi-journal-bookmark-fill"></i>
+
+                    <h4>School Education</h4>
+
+                    <p>Netaji High School</p>
+
+                    <span>Year: 2020</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CURRENT TRAINING SECTION -->
+
+<section id="training" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            Current <span class="accent">Training</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <div class="info-card">
+
+                    <i class="bi bi-code-square"></i>
+
+                    <h4>Java Full Stack Development</h4>
+
+                    <p><strong>Tata STRIVE</strong></p>
+
+                    <p>
+                        Currently undergoing training to build
+                        knowledge and practical skills in
+                        Java Full Stack Development.
+                    </p>
+
+                    <span class="training-tag">
+                        In Progress
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS SECTION -->
+
+<section id="skills" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            My <span class="accent">Skills</span>
+        </h2>
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4 col-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-code-slash"></i>
+
+                    <h5>Programming</h5>
+
+                    <p>Python, Java, C</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 col-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-globe"></i>
+
+                    <h5>Web Development</h5>
+
+                    <p>HTML, CSS, Bootstrap</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 col-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-database"></i>
+
+                    <h5>Database</h5>
+
+                    <p>SQL, Database Management</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 col-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-bar-chart-fill"></i>
+
+                    <h5>Data Science</h5>
+
+                    <p>Data Analysis</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 col-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-people-fill"></i>
+
+                    <h5>Soft Skills</h5>
+
+                    <p>Teamwork, Communication</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 col-6">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-layers"></i>
+
+                    <h5>Current Learning</h5>
+
+                    <p>Java Full Stack</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS SECTION -->
+
+<section id="projects" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            My <span class="accent">Projects</span>
+        </h2>
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="bi bi-cpu-fill"></i>
+                    </div>
+
+                    <h4>Human Screams Detection using LLM</h4>
+
+                    <p>
+                        An academic project focused on detecting
+                        human screams using intelligent audio
+                        processing and AI-based techniques.
+                    </p>
+
+                    <span>
+                        Artificial Intelligence | LLM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+
+                    <h4>Personal Portfolio Website</h4>
+
+                    <p>
+                        A responsive personal portfolio website
+                        developed using HTML, CSS and Bootstrap
+                        to showcase my skills and projects.
+                    </p>
+
+                    <span>
+                        HTML | CSS | Bootstrap
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CERTIFICATIONS SECTION -->
+
+<section id="certifications" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            My <span class="accent">Certifications</span>
+        </h2>
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    <h5>Simplilearn Certificate 1</h5>
+
+                    <p>
+                        View the certificate/course link.
+                    </p>
+
+                    <a href="https://simpli.app.link/IAnLMFSLf4b"
+                       target="_blank">
+
+                        View Certificate
+                        <i class="bi bi-box-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    <h5>Simplilearn Certificate 2</h5>
+
+                    <p>
+                        View the certificate/course link.
+                    </p>
+
+                    <a href="https://simpli.app.link/psdJzXPLf4b"
+                       target="_blank">
+
+                        View Certificate
+                        <i class="bi bi-box-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="cert-card">
+
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    <h5>Simplilearn Certificate 3</h5>
+
+                    <p>
+                        View the certificate/course link.
+                    </p>
+
+                    <a href="https://simpli.app.link/fQzgCXLLf4b"
+                       target="_blank">
+
+                        View Certificate
+                        <i class="bi bi-box-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section id="contact" class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-heading">
+            Contact <span class="accent">Me</span>
+        </h2>
+
+        <div class="contact-card">
+
+            <p>
+                <i class="bi bi-envelope-fill"></i>
+
+                <a class="text-light"
+                   href="mailto:godugurajesh28@gmail.com">
+
+                    godugurajesh28@gmail.com
+
+                </a>
+
+            </p>
+
+            <p>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                Hyderabad, Telangana, India
+
+            </p>
+
+            <p>
+                <i class="bi bi-linkedin"></i>
+
+                <a class="text-light"
+                   href="https://www.linkedin.com/in/godugu-rajesh-1603a32b7"
+                   target="_blank">
+
+                    LinkedIn Profile
+
+                </a>
+
+            </p>
+
+            <p>
+                <i class="bi bi-github"></i>
+
+                <a class="text-light"
+                   href="https://github.com/rajeshgodugu28"
+                   target="_blank">
+
+                    GitHub Profile
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Rajesh. All Rights Reserved.
+    </p>
+
+    <p>
+        Designed with HTML, CSS & Bootstrap.
+    </p>
+
+</footer>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+
+</html>
